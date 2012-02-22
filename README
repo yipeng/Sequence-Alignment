@@ -1,0 +1,36 @@
+Homework Assignment #2
+
+Due midnight 11/1
+
+In this assignment, you will write a program that computes local alignments using an affine gap penalty function and you will apply this program to pairs of protein sequences. You should write your program in Java, C, C++, Perl or Python. If you are writing in Java, you should make a class file called Align.class for the program. If you are writing in C or C++, you should make an executable for the program called Align. If you writing in Perl or Python, you should call your program file Align.pl or Align.py, respectively.
+Program input
+
+The program should take the following as command-line arguments:
+
+the name of a file containing the two sequences to be aligned,
+the name of a file containing a substitution matrix,
+an integer value for the gap initiation penalty (h),
+an integer value for the gap extension penalty (g).
+You should test your local alignment program on the following files which contain sequence pairs:
+simple example
+calcium ion proteins
+yeast kinase proteins
+Additionally, we will test your programs on several held-aside sequence pairs. You should assume that any sequence file given to your program will be in the same format.
+Here is a pointer to the Blosum-62 substitution matrix. You can assume that any substitution matrix given to your program will be in the same format.
+
+Program output
+
+Your program should print out only one optimal alignment in cases where there are multiple optima. If there are multiple starting points for the traceback, you should start from optimal element in the M matrix that is in the lowest row. If there are multiple elements in this row that are optimal, you should select the one that is in the rightmost column. You should use the following preference ordering when following pointers:
+pointers to Ix matrix,
+pointers to M matrix,
+pointers to Iy matrix.
+Also, you should follow the convention that the rows of DP matrix correspond to the characters of the first sequence given, and the columns of the matrix correspond to characters of the second sequence given.
+Below are the correct alignments for the sequences listed above when d = 11 and e = 1:
+
+simple example
+calcium ion proteins
+yeast kinase proteins
+Your programs should provide their output in the same format. Your programs may print additional information before they output the alignment, but the last three lines of output by your program should print the alignment. Each line should show the subsequence of the corresponding input sequence that is part of the alignment. Gaps should be indicated using the '-' character.
+What to turn in and how to do it
+
+To turn in your completed assignment, you should copy your source code file(s) and your executable (or byte code file if you're using Java) to the directory /u/medinfo/handin/bmi576-fall2011/hw2/user/ where user is your login.
